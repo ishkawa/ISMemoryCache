@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ishkawa/ISMemoryCache.png)](https://travis-ci.org/ishkawa/ISMemoryCache)
+
 NSDictionary-based memory cache.
 
 ## Requirements
