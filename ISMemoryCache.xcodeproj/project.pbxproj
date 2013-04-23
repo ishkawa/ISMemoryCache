@@ -11,11 +11,13 @@
 		7F8C62771726F67D00F642B9 /* ISMemoryCache.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F8C62761726F67D00F642B9 /* ISMemoryCache.h */; };
 		7F8C62791726F67D00F642B9 /* ISMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8C62781726F67D00F642B9 /* ISMemoryCache.m */; };
 		7F8C62811726F67D00F642B9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8C62801726F67D00F642B9 /* SenTestingKit.framework */; };
-		7F8C62831726F67D00F642B9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8C62821726F67D00F642B9 /* UIKit.framework */; };
 		7F8C62841726F67D00F642B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8C62711726F67C00F642B9 /* Foundation.framework */; };
 		7F8C62871726F67D00F642B9 /* libISMemoryCache.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8C626E1726F67C00F642B9 /* libISMemoryCache.a */; };
 		7F8C628D1726F67D00F642B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F8C628B1726F67D00F642B9 /* InfoPlist.strings */; };
-		7F8C62901726F67D00F642B9 /* ISMemoryCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8C628F1726F67D00F642B9 /* ISMemoryCacheTests.m */; };
+		7F8C629A1726F69E00F642B9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8C62991726F69E00F642B9 /* UIKit.framework */; };
+		7F8C629B1726F6A400F642B9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8C62991726F69E00F642B9 /* UIKit.framework */; };
+		7F8C629D1726F7B900F642B9 /* ISMemoryCacheSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8C629C1726F7B900F642B9 /* ISMemoryCacheSpec.m */; };
+		871FFA2AFB4C45AD96B67B00 /* libPods-ISMemoryCacheTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F03366164048E3BD1B6396 /* libPods-ISMemoryCacheTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		76F03366164048E3BD1B6396 /* libPods-ISMemoryCacheTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ISMemoryCacheTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F8C626E1726F67C00F642B9 /* libISMemoryCache.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libISMemoryCache.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F8C62711726F67C00F642B9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7F8C62751726F67D00F642B9 /* ISMemoryCache-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ISMemoryCache-Prefix.pch"; sourceTree = "<group>"; };
@@ -49,11 +52,11 @@
 		7F8C62781726F67D00F642B9 /* ISMemoryCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISMemoryCache.m; sourceTree = "<group>"; };
 		7F8C627F1726F67D00F642B9 /* ISMemoryCacheTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ISMemoryCacheTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F8C62801726F67D00F642B9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		7F8C62821726F67D00F642B9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		7F8C628A1726F67D00F642B9 /* ISMemoryCacheTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ISMemoryCacheTests-Info.plist"; sourceTree = "<group>"; };
 		7F8C628C1726F67D00F642B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7F8C628E1726F67D00F642B9 /* ISMemoryCacheTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISMemoryCacheTests.h; sourceTree = "<group>"; };
-		7F8C628F1726F67D00F642B9 /* ISMemoryCacheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISMemoryCacheTests.m; sourceTree = "<group>"; };
+		7F8C62991726F69E00F642B9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7F8C629C1726F7B900F642B9 /* ISMemoryCacheSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISMemoryCacheSpec.m; sourceTree = "<group>"; };
+		F091605E849948DDBE82A54A /* Pods-ISMemoryCacheTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISMemoryCacheTests.xcconfig"; path = "Pods/Pods-ISMemoryCacheTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F8C629A1726F69E00F642B9 /* UIKit.framework in Frameworks */,
 				7F8C62721726F67D00F642B9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,9 +74,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F8C62811726F67D00F642B9 /* SenTestingKit.framework in Frameworks */,
-				7F8C62831726F67D00F642B9 /* UIKit.framework in Frameworks */,
 				7F8C62841726F67D00F642B9 /* Foundation.framework in Frameworks */,
 				7F8C62871726F67D00F642B9 /* libISMemoryCache.a in Frameworks */,
+				7F8C629B1726F6A400F642B9 /* UIKit.framework in Frameworks */,
+				871FFA2AFB4C45AD96B67B00 /* libPods-ISMemoryCacheTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +91,7 @@
 				7F8C62881726F67D00F642B9 /* ISMemoryCacheTests */,
 				7F8C62701726F67C00F642B9 /* Frameworks */,
 				7F8C626F1726F67C00F642B9 /* Products */,
+				F091605E849948DDBE82A54A /* Pods-ISMemoryCacheTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,9 +107,10 @@
 		7F8C62701726F67C00F642B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7F8C62991726F69E00F642B9 /* UIKit.framework */,
 				7F8C62711726F67C00F642B9 /* Foundation.framework */,
 				7F8C62801726F67D00F642B9 /* SenTestingKit.framework */,
-				7F8C62821726F67D00F642B9 /* UIKit.framework */,
+				76F03366164048E3BD1B6396 /* libPods-ISMemoryCacheTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -129,8 +136,7 @@
 		7F8C62881726F67D00F642B9 /* ISMemoryCacheTests */ = {
 			isa = PBXGroup;
 			children = (
-				7F8C628E1726F67D00F642B9 /* ISMemoryCacheTests.h */,
-				7F8C628F1726F67D00F642B9 /* ISMemoryCacheTests.m */,
+				7F8C629C1726F7B900F642B9 /* ISMemoryCacheSpec.m */,
 				7F8C62891726F67D00F642B9 /* Supporting Files */,
 			);
 			path = ISMemoryCacheTests;
@@ -169,10 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F8C62961726F67D00F642B9 /* Build configuration list for PBXNativeTarget "ISMemoryCacheTests" */;
 			buildPhases = (
+				4D242A1575C647EFB4504EF3 /* Check Pods Manifest.lock */,
 				7F8C627A1726F67D00F642B9 /* Sources */,
 				7F8C627B1726F67D00F642B9 /* Frameworks */,
 				7F8C627C1726F67D00F642B9 /* Resources */,
 				7F8C627D1726F67D00F642B9 /* ShellScript */,
+				138BEBFD9D184095B66866A7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -223,6 +231,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		138BEBFD9D184095B66866A7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-ISMemoryCacheTests-resources.sh\"\n";
+		};
+		4D242A1575C647EFB4504EF3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sanbox is not in sync with the Podfile.lock. Run 'pod install'.\nEOM\n    exit 1\nfi\n";
+		};
 		7F8C627D1726F67D00F642B9 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -251,7 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F8C62901726F67D00F642B9 /* ISMemoryCacheTests.m in Sources */,
+				7F8C629D1726F7B900F642B9 /* ISMemoryCacheSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +392,7 @@
 		};
 		7F8C62971726F67D00F642B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F091605E849948DDBE82A54A /* Pods-ISMemoryCacheTests.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
@@ -371,6 +408,7 @@
 		};
 		7F8C62981726F67D00F642B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F091605E849948DDBE82A54A /* Pods-ISMemoryCacheTests.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
@@ -403,6 +441,7 @@
 				7F8C62951726F67D00F642B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F8C62961726F67D00F642B9 /* Build configuration list for PBXNativeTarget "ISMemoryCacheTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +450,7 @@
 				7F8C62981726F67D00F642B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
