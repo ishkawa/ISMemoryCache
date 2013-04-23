@@ -43,16 +43,16 @@
 
 - (void)removeUnretainedObjects
 {
-    for (NSString *key in [self.dictionary allKeys]) {
+    for (NSString *key in [self allKeys]) {
         __weak id wobject;
         
         @autoreleasepool {
-            wobject = [self.dictionary objectForKey:key];
-            [self.dictionary removeObjectForKey:key];
+            wobject = [self objectForKey:key];
+            [self removeObjectForKey:key];
         }
         
         if (wobject) {
-            [self.dictionary setObject:wobject forKey:key];
+            [self setObject:wobject forKey:key];
         }
     }
 }
