@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F90FE07A-CDB8-497A-A988-1D8AB412DE93</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ISMemoryCache</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1DCEEDF9-3E27-4CEA-8F56-7119EA46099D</key>
+		<string>ssh://github.com/ishkawa/ISMemoryCache.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ISMemoryCache.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1DCEEDF9-3E27-4CEA-8F56-7119EA46099D</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/ishkawa/ISMemoryCache.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1DCEEDF9-3E27-4CEA-8F56-7119EA46099D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1DCEEDF9-3E27-4CEA-8F56-7119EA46099D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ISMemoryCache</string>
+		</dict>
+	</array>
+</dict>
+</plist>

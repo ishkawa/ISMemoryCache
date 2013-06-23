@@ -4,6 +4,12 @@
 
 @property (nonatomic, strong) NSMutableDictionary *dictionary;
 
+#if OS_OBJECT_USE_OBJC
+@property (nonatomic, strong) dispatch_semaphore_t semaphore;
+#else
+@property (nonatomic, assign) dispatch_semaphore_t semaphore;
+#endif
+
 @end
 
 @implementation ISMemoryCache
@@ -23,7 +29,8 @@
 {
     self = [super init];
     if (self) {
-        self.dictionary = [NSMutableDictionary dictionary];
+        _semaphore = dispatch_semaphore_create(1);
+        _dictionary = [NSMutableDictionary dictionary];
         
         NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
         [center addObserver:self
@@ -37,6 +44,9 @@
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+#if !OS_OBJECT_USE_OBJC
+    dispatch_release(self.semaphore);
+#endif
 }
 
 #pragma mark -
@@ -63,7 +73,7 @@
 {
     self = [self init];
     if (self) {
-        self.dictionary = [[NSMutableDictionary alloc] initWithObjects:objects forKeys:keys];
+        _dictionary = [[NSMutableDictionary alloc] initWithObjects:objects forKeys:keys];
     }
     return self;
 }
@@ -87,12 +97,16 @@
 
 - (void)setObject:(id)object forKey:(id <NSCopying>)key
 {
+    dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
     [self.dictionary setObject:object forKey:key];
+    dispatch_semaphore_signal(self.semaphore);
 }
 
 - (void)removeObjectForKey:(id)key
 {
+    dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
     [self.dictionary removeObjectForKey:key];
+    dispatch_semaphore_signal(self.semaphore);
 }
 
 @end
