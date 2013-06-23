@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name         = "ISMemoryCache"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.platform     = :ios, '5.0'
   s.summary      = "NSDictionary-based memory cache."
   s.homepage     = "https://github.com/ishkawa/ISMemoryCache"
   s.author       = { "Yosuke Ishikawa" => "y@ishkawa.org" }
-  s.source       = { :git => "https://github.com/ishkawa/ISMemoryCache.git", :tag => "0.0.2" }
+  s.source       = { :git => "https://github.com/ishkawa/ISMemoryCache.git", :tag => "0.0.3" }
   s.source_files = 'ISMemoryCache/**/*.{h,m}'
   s.requires_arc = true
   s.license      = {

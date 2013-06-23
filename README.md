@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/ishkawa/ISMemoryCache.png)](https://travis-ci.org/ishkawa/ISMemoryCache)
 
-NSDictionary-based memory cache.
+NSDictionary-based memory cache which can identify unused values.
 
 ## Requirements
 
