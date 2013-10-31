@@ -17,7 +17,6 @@
 		7F8C628D1726F67D00F642B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F8C628B1726F67D00F642B9 /* InfoPlist.strings */; };
 		7F8C629A1726F69E00F642B9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8C62991726F69E00F642B9 /* UIKit.framework */; };
 		7F8C629B1726F6A400F642B9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8C62991726F69E00F642B9 /* UIKit.framework */; };
-		7F8C629D1726F7B900F642B9 /* ISMemoryCacheSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8C629C1726F7B900F642B9 /* ISMemoryCacheSpec.m */; };
 		871FFA2AFB4C45AD96B67B00 /* libPods-ISMemoryCacheTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F03366164048E3BD1B6396 /* libPods-ISMemoryCacheTests.a */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +56,6 @@
 		7F8C628A1726F67D00F642B9 /* ISMemoryCacheTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ISMemoryCacheTests-Info.plist"; sourceTree = "<group>"; };
 		7F8C628C1726F67D00F642B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7F8C62991726F69E00F642B9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		7F8C629C1726F7B900F642B9 /* ISMemoryCacheSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISMemoryCacheSpec.m; sourceTree = "<group>"; };
 		F091605E849948DDBE82A54A /* Pods-ISMemoryCacheTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISMemoryCacheTests.xcconfig"; path = "Pods/Pods-ISMemoryCacheTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -138,7 +136,6 @@
 		7F8C62881726F67D00F642B9 /* ISMemoryCacheTests */ = {
 			isa = PBXGroup;
 			children = (
-				7F8C629C1726F7B900F642B9 /* ISMemoryCacheSpec.m */,
 				7F5C7E801822869300F51EF2 /* ISMemoryCacheTests.m */,
 				7F8C62891726F67D00F642B9 /* Supporting Files */,
 			);
@@ -290,7 +287,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F8C629D1726F7B900F642B9 /* ISMemoryCacheSpec.m in Sources */,
 				7F5C7E811822869300F51EF2 /* ISMemoryCacheTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
