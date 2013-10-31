@@ -2,15 +2,11 @@
 
 NSDictionary-based memory cache which can identify unused values.
 
-## Requirements
-
-- iOS 5.0 or later
-- ARC
-
 ## Features
 
+- thread safe.
 - detects unused objects and removes them.
-- works automatically on receiving memory warning.
+- removes unused objects on receiving memory warning.
 
 ## Usage
 
@@ -45,6 +41,11 @@ If you use CocoaPods, you can install ISMemoryCache by inserting config below.
 ```
 pod 'ISMemoryCache', :git => 'https://github.com/ishkawa/ISMemoryCache.git'
 ```
+
+## Requirements
+
+- iOS 5.0 or later
+- ARC
 
 ## License
 

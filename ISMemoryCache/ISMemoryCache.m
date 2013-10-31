@@ -85,7 +85,10 @@
 
 - (id)objectForKey:(id)key
 {
-    return [self.dictionary objectForKey:key];
+    dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
+    id object = [self.dictionary objectForKey:key];
+    dispatch_semaphore_signal(self.semaphore);
+    return object;
 }
 
 - (NSEnumerator *)keyEnumerator
