@@ -1,4 +1,5 @@
 #import <SenTestingKit/SenTestingKit.h>
+#import <OCMock/OCMock.h>
 #import "ISMemoryCache.h"
 
 static NSString *ISTestKey = @"test";
@@ -58,6 +59,16 @@ static NSString *ISTestKey = @"test";
     }
     [cache removeUnretainedObjects];
     STAssertEquals([cache objectForKey:ISTestKey], retainedObject, @"object for key should not be removed.");
+}
+
+- (void)testHandleMemoryWarning
+{
+    id mock = [OCMockObject partialMockForObject:cache];
+    [[mock expect] removeUnretainedObjects];
+    
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    NSString *name = UIApplicationDidReceiveMemoryWarningNotification;
+    [center postNotificationName:name object:nil];
 }
 
 @end
