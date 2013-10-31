@@ -11,5 +11,5 @@ test:
 		GCC_GENERATE_TEST_COVERAGE_FILES=YES
 
 coveralls:
-	coveralls -e ISMemoryCacheTests
+	coveralls -e ISMemoryCacheTests -e Pods
 
