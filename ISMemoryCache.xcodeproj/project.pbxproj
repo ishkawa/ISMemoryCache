@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F5C7E811822869300F51EF2 /* ISMemoryCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5C7E801822869300F51EF2 /* ISMemoryCacheTests.m */; };
 		7F8C62721726F67D00F642B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8C62711726F67C00F642B9 /* Foundation.framework */; };
 		7F8C62771726F67D00F642B9 /* ISMemoryCache.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F8C62761726F67D00F642B9 /* ISMemoryCache.h */; };
 		7F8C62791726F67D00F642B9 /* ISMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8C62781726F67D00F642B9 /* ISMemoryCache.m */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		76F03366164048E3BD1B6396 /* libPods-ISMemoryCacheTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ISMemoryCacheTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F5C7E801822869300F51EF2 /* ISMemoryCacheTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISMemoryCacheTests.m; sourceTree = "<group>"; };
 		7F8C626E1726F67C00F642B9 /* libISMemoryCache.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libISMemoryCache.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F8C62711726F67C00F642B9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7F8C62751726F67D00F642B9 /* ISMemoryCache-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ISMemoryCache-Prefix.pch"; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				7F8C629C1726F7B900F642B9 /* ISMemoryCacheSpec.m */,
+				7F5C7E801822869300F51EF2 /* ISMemoryCacheTests.m */,
 				7F8C62891726F67D00F642B9 /* Supporting Files */,
 			);
 			path = ISMemoryCacheTests;
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F8C629D1726F7B900F642B9 /* ISMemoryCacheSpec.m in Sources */,
+				7F5C7E811822869300F51EF2 /* ISMemoryCacheTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
