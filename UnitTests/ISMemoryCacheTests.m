@@ -1,10 +1,10 @@
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
 #import "ISMemoryCache.h"
 
 static NSString *ISTestKey = @"test";
 
-@interface ISMemoryCacheTests : SenTestCase {
+@interface ISMemoryCacheTests : XCTestCase {
     ISMemoryCache *cache;
 }
 
@@ -28,8 +28,8 @@ static NSString *ISTestKey = @"test";
 {
     NSObject *object = [[NSObject alloc] init];
     [cache setObject:object forKey:ISTestKey];
-    STAssertEquals([cache objectForKey:ISTestKey], object, @"object for key should equal inserted object.");
-    STAssertTrue([[cache allKeys] containsObject:ISTestKey], nil);
+    XCTAssertEqual([cache objectForKey:ISTestKey], object, @"object for key should equal inserted object.");
+    XCTAssertTrue([[cache allKeys] containsObject:ISTestKey]);
 }
 
 - (void)testRemoveObjectForKey
@@ -37,8 +37,8 @@ static NSString *ISTestKey = @"test";
     NSObject *object = [[NSObject alloc] init];
     [cache setObject:object forKey:ISTestKey];
     [cache removeObjectForKey:ISTestKey];
-    STAssertNil([cache objectForKey:ISTestKey], @"cache should not contain object for key.");
-    STAssertFalse([[cache allKeys] containsObject:ISTestKey], nil);
+    XCTAssertNil([cache objectForKey:ISTestKey], @"cache should not contain object for key.");
+    XCTAssertFalse([[cache allKeys] containsObject:ISTestKey]);
 }
 
 - (void)testRemoveUnretainedObjects
@@ -48,7 +48,7 @@ static NSString *ISTestKey = @"test";
         [cache setObject:unretainedObject forKey:ISTestKey];
     }
     [cache removeUnretainedObjects];
-    STAssertNil([cache objectForKey:ISTestKey], @"object for key should be removed.");
+    XCTAssertNil([cache objectForKey:ISTestKey], @"object for key should be removed.");
 }
 
 - (void)testNotRemoveRetainedObjects
@@ -58,7 +58,7 @@ static NSString *ISTestKey = @"test";
         [cache setObject:retainedObject forKey:ISTestKey];
     }
     [cache removeUnretainedObjects];
-    STAssertEquals([cache objectForKey:ISTestKey], retainedObject, @"object for key should not be removed.");
+    XCTAssertEqual([cache objectForKey:ISTestKey], retainedObject, @"object for key should not be removed.");
 }
 
 - (void)testHandleMemoryWarning
