@@ -24,6 +24,22 @@ static NSString *ISTestKey = @"test";
     [super tearDown];
 }
 
+- (void)testSharedCache
+{
+    ISMemoryCache *cache1 = [ISMemoryCache sharedCache];
+    ISMemoryCache *cache2 = [ISMemoryCache sharedCache];
+    XCTAssertEqual(cache1, cache2, @"shared instance should returns same instance.");
+}
+
+- (void)testInitWithObjectsForKeys
+{
+    NSDictionary *dictionary = @{@"foo": @"hoge", @"bar": @123, @"baz": [NSDate date]};
+    ISMemoryCache *initializedCache = [[ISMemoryCache alloc] initWithObjects:[dictionary allValues]
+                                                          forKeys:[dictionary allKeys]];
+    
+    XCTAssertEqualObjects([initializedCache performSelector:@selector(dictionary)], dictionary);
+}
+
 - (void)testSetObjectForKey
 {
     NSObject *object = [[NSObject alloc] init];
