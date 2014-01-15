@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ishkawa/ISMemoryCache.png)](https://travis-ci.org/ishkawa/ISMemoryCache)
+# ISMemoryCache [![Build Status](https://travis-ci.org/ishkawa/ISMemoryCache.png)](https://travis-ci.org/ishkawa/ISMemoryCache) [![Coverage Status](https://coveralls.io/repos/ishkawa/ISMemoryCache/badge.png?branch=master)](https://coveralls.io/r/ishkawa/ISMemoryCache?branch=master)
 
 NSDictionary-based memory cache which can identify unused values.
 
