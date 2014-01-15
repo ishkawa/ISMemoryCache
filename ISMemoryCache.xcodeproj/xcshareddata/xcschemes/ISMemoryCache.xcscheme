@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7F8C627E1726F67D00F642B9"
-               BuildableName = "ISMemoryCacheTests.octest"
-               BlueprintName = "ISMemoryCacheTests"
+               BlueprintIdentifier = "7FB6ECE81886A5C100EB0EEF"
+               BuildableName = "UnitTests.xctest"
+               BlueprintName = "UnitTests"
                ReferencedContainer = "container:ISMemoryCache.xcodeproj">
             </BuildableReference>
          </TestableReference>

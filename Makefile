@@ -1,15 +1,14 @@
 test:
-	xcodebuild \
+	xcodebuild clean test\
 		-sdk iphonesimulator \
 		-workspace ISMemoryCache.xcworkspace \
-		-scheme ISMemoryCacheTests \
+		-scheme ISMemoryCache \
 		-configuration Debug \
-		clean build \
-		ONLY_ACTIVE_ARCH=NO \
-		TEST_AFTER_BUILD=YES \
+		-destination "name=iPhone Retina (4-inch),OS=7.0" \
+		OBJROOT=build \
 		GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES \
 		GCC_GENERATE_TEST_COVERAGE_FILES=YES
 
 coveralls:
-	coveralls -e ISMemoryCacheTests -e Pods
+	coveralls -e UnitTests -e Pods
 
