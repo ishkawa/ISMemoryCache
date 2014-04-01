@@ -31,6 +31,12 @@ static NSString *ISTestKey = @"test";
     XCTAssertEqual(cache1, cache2, @"shared instance should returns same instance.");
 }
 
+- (void)testDefaultClearingTypes
+{
+    XCTAssertEqual(cache.clearingTypeOnMemoryWarning, ISMemoryCacheClearingTypeAllObjects);
+    XCTAssertEqual(cache.clearingTypeOnEnteringBackground, ISMemoryCacheClearingTypeUnretainedObjects);
+}
+
 - (void)testInitWithObjectsForKeys
 {
     NSDictionary *dictionary = @{@"foo": @"hoge", @"bar": @123, @"baz": [NSDate date]};
@@ -77,14 +83,60 @@ static NSString *ISTestKey = @"test";
     XCTAssertEqual([cache objectForKey:ISTestKey], retainedObject, @"object for key should not be removed.");
 }
 
-- (void)testHandleMemoryWarning
+- (void)testHandlingMemoryWarning
 {
-    id mock = [OCMockObject partialMockForObject:cache];
-    [[mock expect] removeUnretainedObjects];
-    
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     NSString *name = UIApplicationDidReceiveMemoryWarningNotification;
+    id mock;
+    
+    mock = [OCMockObject partialMockForObject:cache];
+    cache.clearingTypeOnMemoryWarning = ISMemoryCacheClearingTypeNone;
+    [[mock reject] removeAllObjects];
+    [[mock reject] removeUnretainedObjects];
     [center postNotificationName:name object:nil];
+    XCTAssertNoThrow([mock verify]);
+    
+    mock = [OCMockObject partialMockForObject:cache];
+    cache.clearingTypeOnMemoryWarning = ISMemoryCacheClearingTypeUnretainedObjects;
+    [[mock reject] removeAllObjects];
+    [[mock expect] removeUnretainedObjects];
+    [center postNotificationName:name object:nil];
+    XCTAssertNoThrow([mock verify]);
+    
+    mock = [OCMockObject partialMockForObject:cache];
+    cache.clearingTypeOnMemoryWarning = ISMemoryCacheClearingTypeAllObjects;
+    [[mock expect] removeAllObjects];
+    [[mock reject] removeUnretainedObjects];
+    [center postNotificationName:name object:nil];
+    XCTAssertNoThrow([mock verify]);
+}
+
+- (void)testHandlingEnteringBackground
+{
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    NSString *name = UIApplicationDidEnterBackgroundNotification;
+    id mock;
+    
+    mock = [OCMockObject partialMockForObject:cache];
+    cache.clearingTypeOnEnteringBackground = ISMemoryCacheClearingTypeNone;
+    [[mock reject] removeAllObjects];
+    [[mock reject] removeUnretainedObjects];
+    [center postNotificationName:name object:nil];
+    XCTAssertNoThrow([mock verify]);
+    
+    mock = [OCMockObject partialMockForObject:cache];
+    cache.clearingTypeOnEnteringBackground = ISMemoryCacheClearingTypeUnretainedObjects;
+    [[mock reject] removeAllObjects];
+    [[mock expect] removeUnretainedObjects];
+    [center postNotificationName:name object:nil];
+    XCTAssertNoThrow([mock verify]);
+    
+    mock = [OCMockObject partialMockForObject:cache];
+    cache.clearingTypeOnEnteringBackground = ISMemoryCacheClearingTypeAllObjects;
+    [[mock expect] removeAllObjects];
+    [[mock reject] removeUnretainedObjects];
+    [center postNotificationName:name object:nil];
+    XCTAssertNoThrow([mock verify]);
 }
 
 - (void)testReadAndWriteFromMultipleThreads
