@@ -203,7 +203,7 @@
 		7F8C62661726F67C00F642B9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Yosuke Ishikawa";
 				TargetAttributes = {
 					7FB6ECE81886A5C100EB0EEF = {
@@ -369,6 +369,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/ISMemoryCache.dst;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ISMemoryCache/ISMemoryCache-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
@@ -381,6 +383,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/ISMemoryCache.dst;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ISMemoryCache/ISMemoryCache-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
@@ -393,7 +397,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 15F67F3DE453463B99EC478A /* Pods-UnitTests.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -426,7 +429,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 15F67F3DE453463B99EC478A /* Pods-UnitTests.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
