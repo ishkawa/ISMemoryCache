@@ -58,7 +58,6 @@
 		7FB6ECF21886A5C100EB0EEF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7FB6ECF61886A5C100EB0EEF /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		7FB6ECFC1886A5DE00EB0EEF /* ISMemoryCacheTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISMemoryCacheTests.m; sourceTree = "<group>"; };
-		F091605E849948DDBE82A54A /* Pods-ISMemoryCacheTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISMemoryCacheTests.xcconfig"; path = "Pods/Pods-ISMemoryCacheTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		FBD00A9789F64ED7AFE00442 /* libPods-UnitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UnitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -94,7 +93,6 @@
 				7FB6ECEE1886A5C100EB0EEF /* UnitTests */,
 				7F8C62701726F67C00F642B9 /* Frameworks */,
 				7F8C626F1726F67C00F642B9 /* Products */,
-				F091605E849948DDBE82A54A /* Pods-ISMemoryCacheTests.xcconfig */,
 				15F67F3DE453463B99EC478A /* Pods-UnitTests.xcconfig */,
 			);
 			sourceTree = "<group>";
