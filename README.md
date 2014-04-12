@@ -1,25 +1,26 @@
 # ISMemoryCache [![Build Status](https://travis-ci.org/ishkawa/ISMemoryCache.png)](https://travis-ci.org/ishkawa/ISMemoryCache) [![Coverage Status](https://coveralls.io/repos/ishkawa/ISMemoryCache/badge.png?branch=master)](https://coveralls.io/r/ishkawa/ISMemoryCache?branch=master)
 
-NSDictionary-based memory cache which can identify unused values.
+NSDictionary-based memory cache which can identify unretained values.
 
 ## Features
 
 - thread safe.
 - detects unused objects and removes them.
-- removes unused objects on receiving memory warning.
+- removes unused objects on entering background.
+- removes all objects on receiving memory warning.
 
 ## Usage
 
 ### Setting objects
 
 ```objectivec
-[[ISMemoryCache sharedCache] setObject:object forKey:@"key"];
+[cache setObject:object forKey:@"key"];
 ```
 
 ### Loading objects
 
 ```objectivec
-[[ISMemoryCache sharedCache] objectForKey:@"key"];
+[cache objectForKey:@"key"];
 ```
 
 ### Removing unused objects
@@ -27,7 +28,7 @@ NSDictionary-based memory cache which can identify unused values.
 remove object which is not retained by any other objects.
 
 ```objectivec
-[[ISMemoryCache sharedCache] removeUnretainedObjects];
+[cache removeUnretainedObjects];
 ```
 
 ## Installing
@@ -39,7 +40,7 @@ Add `ISMemoryCache/ISMemoryCache.{h,m}` to your Xcode project.
 If you use CocoaPods, you can install ISMemoryCache by inserting config below.
 
 ```
-pod 'ISMemoryCache', :git => 'https://github.com/ishkawa/ISMemoryCache.git'
+pod 'ISMemoryCache'
 ```
 
 ## Requirements
@@ -49,7 +50,7 @@ pod 'ISMemoryCache', :git => 'https://github.com/ishkawa/ISMemoryCache.git'
 
 ## License
 
-Copyright (c) 2013 Yosuke Ishikawa
+Copyright (c) 2013-2014 Yosuke Ishikawa
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
