@@ -29,12 +29,19 @@
 {
     self = [super init];
     if (self) {
+        _clearingTypeOnMemoryWarning = ISMemoryCacheClearingTypeAllObjects;
+        _clearingTypeOnEnteringBackground = ISMemoryCacheClearingTypeUnretainedObjects;
         _semaphore = dispatch_semaphore_create(1);
         _dictionary = [NSMutableDictionary dictionary];
         
         NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
         [center addObserver:self
-                   selector:@selector(removeUnretainedObjects)
+                   selector:@selector(handleApplicationDidEnterBackgroundNotification:)
+                       name:UIApplicationDidEnterBackgroundNotification
+                     object:nil];
+        
+        [center addObserver:self
+                   selector:@selector(handleApplicationDidReceiveMemoryWarningNotification:)
                        name:UIApplicationDidReceiveMemoryWarningNotification
                      object:nil];
     }
@@ -47,6 +54,34 @@
 #if !OS_OBJECT_USE_OBJC
     dispatch_release(self.semaphore);
 #endif
+}
+
+#pragma mark - NSNotification
+
+- (void)handleApplicationDidReceiveMemoryWarningNotification:(NSNotification *)notification
+{
+    [self performClearingForType:self.clearingTypeOnMemoryWarning];
+}
+
+- (void)handleApplicationDidEnterBackgroundNotification:(NSNotification *)notification
+{
+    [self performClearingForType:self.clearingTypeOnEnteringBackground];
+}
+
+- (void)performClearingForType:(ISMemoryCacheClearingType)clearingType
+{
+    switch (clearingType) {
+        case ISMemoryCacheClearingTypeNone:
+            break;
+            
+        case ISMemoryCacheClearingTypeUnretainedObjects:
+            [self removeUnretainedObjects];
+            break;
+            
+        case ISMemoryCacheClearingTypeAllObjects:
+            [self removeAllObjects];
+            break;
+    }
 }
 
 #pragma mark -
