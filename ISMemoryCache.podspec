@@ -1,17 +1,17 @@
 Pod::Spec.new do |s|
   s.name         = "ISMemoryCache"
-  s.version      = "0.0.5"
+  s.version      = "0.1.0"
   s.platform     = :ios, '5.0'
   s.summary      = "NSDictionary-based memory cache."
   s.homepage     = "https://github.com/ishkawa/ISMemoryCache"
   s.author       = { "Yosuke Ishikawa" => "y@ishkawa.org" }
-  s.source       = { :git => "https://github.com/ishkawa/ISMemoryCache.git", :tag => "0.0.5" }
+  s.source       = { :git => "https://github.com/ishkawa/ISMemoryCache.git", :tag => "0.1.0" }
   s.source_files = 'ISMemoryCache/**/*.{h,m}'
   s.requires_arc = true
   s.license      = {
 	:type => 'MIT',
 	:text => <<-LICENSE
-      Copyright (c) 2013 Yosuke Ishikawa
+      Copyright (c) 2013-2014 Yosuke Ishikawa
 
       Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
