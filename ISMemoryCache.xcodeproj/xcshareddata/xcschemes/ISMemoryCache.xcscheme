@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7F8C626D1726F67C00F642B9"
-               BuildableName = "libISMemoryCache.a"
+               BlueprintIdentifier = "7FD6DBCF1A1E129F004FBEBB"
+               BuildableName = "ISMemoryCache.framework"
                BlueprintName = "ISMemoryCache"
                ReferencedContainer = "container:ISMemoryCache.xcodeproj">
             </BuildableReference>
@@ -32,13 +32,22 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7FB6ECE81886A5C100EB0EEF"
+               BlueprintIdentifier = "7FD6DBD91A1E129F004FBEBB"
                BuildableName = "UnitTests.xctest"
                BlueprintName = "UnitTests"
                ReferencedContainer = "container:ISMemoryCache.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "7FD6DBCF1A1E129F004FBEBB"
+            BuildableName = "ISMemoryCache.framework"
+            BlueprintName = "ISMemoryCache"
+            ReferencedContainer = "container:ISMemoryCache.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -49,6 +58,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "7FD6DBCF1A1E129F004FBEBB"
+            BuildableName = "ISMemoryCache.framework"
+            BlueprintName = "ISMemoryCache"
+            ReferencedContainer = "container:ISMemoryCache.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -58,6 +76,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "7FD6DBCF1A1E129F004FBEBB"
+            BuildableName = "ISMemoryCache.framework"
+            BlueprintName = "ISMemoryCache"
+            ReferencedContainer = "container:ISMemoryCache.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

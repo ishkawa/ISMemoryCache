@@ -4,7 +4,7 @@ test:
 		-workspace ISMemoryCache.xcworkspace \
 		-scheme ISMemoryCache \
 		-configuration Debug \
-		-destination "name=iPhone Retina (4-inch),OS=7.0" \
+		-destination "name=iPhone 6,OS=8.1" \
 		OBJROOT=build \
 		GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES \
 		GCC_GENERATE_TEST_COVERAGE_FILES=YES

@@ -14,9 +14,9 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7F8C627E1726F67D00F642B9"
-               BuildableName = "ISMemoryCacheTests.xctest"
-               BlueprintName = "ISMemoryCacheTests"
+               BlueprintIdentifier = "7FD6DBD91A1E129F004FBEBB"
+               BuildableName = "UnitTests.xctest"
+               BlueprintName = "UnitTests"
                ReferencedContainer = "container:ISMemoryCache.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7F8C627E1726F67D00F642B9"
-               BuildableName = "ISMemoryCacheTests.xctest"
-               BlueprintName = "ISMemoryCacheTests"
+               BlueprintIdentifier = "7FD6DBD91A1E129F004FBEBB"
+               BuildableName = "UnitTests.xctest"
+               BlueprintName = "UnitTests"
                ReferencedContainer = "container:ISMemoryCache.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -49,6 +49,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "7FD6DBD91A1E129F004FBEBB"
+            BuildableName = "UnitTests.xctest"
+            BlueprintName = "UnitTests"
+            ReferencedContainer = "container:ISMemoryCache.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

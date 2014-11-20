@@ -142,7 +142,7 @@ static NSString *ISTestKey = @"test";
 - (void)testReadAndWriteFromMultipleThreads
 {
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-    for (NSInteger index = 0; index < 1000000; index++) {
+    for (NSInteger index = 0; index < 10000; index++) {
         [queue addOperationWithBlock:^{
             [cache setObject:@(index) forKey:ISTestKey];
             [cache objectForKey:ISTestKey];

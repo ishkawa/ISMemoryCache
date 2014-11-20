@@ -1,4 +1,7 @@
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+FOUNDATION_EXPORT double ISMemoryCacheVersionNumber;
+FOUNDATION_EXPORT const unsigned char ISMemoryCacheVersionString[];
 
 typedef NS_ENUM(NSUInteger, ISMemoryCacheClearingType) {
     ISMemoryCacheClearingTypeNone,
